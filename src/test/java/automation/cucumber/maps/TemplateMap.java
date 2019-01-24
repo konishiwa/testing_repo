@@ -1,23 +1,21 @@
 package automation.cucumber.maps;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
-import io.restassured.RestAssured;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
 import cucumber.api.java.en.Then;
 
-import automation.cucumber.steps.TemplateSerenitySteps;
-
+import automation.cucumber.steps.TemplateSteps;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 
 public class TemplateMap {
 	
 	@Steps
-	TemplateSerenitySteps steps;
+	TemplateSteps steps;
 	
-	//Use TidyGherkin chrome app on the cucumber feature file to easily generate the step file
-    @Given("^i have an automation template$")
+	//Use TidyGherkin chrome app on the cucumber feature file to easily generate the step file (settings -> camelCase)
+    @Given("^i perform an API call$")
     public void iHaveAnAutomationTemplate() throws Throwable {
         SerenityRest.rest()
         .given()
