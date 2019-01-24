@@ -25,18 +25,13 @@ public class TemplateMap {
         .statusCode(200);
     }
 
-    @Given("^i can use scenario outline and examples to pass in variables like this (.+) and (.+)$")
+    @Given("^i perform an API call with parameters (.*) and (.*)$")
     public void iCanUseScenarioOutlineAndExamplesToPassInVariablesLikeThisAnd(String variable1, String variable2) throws Throwable {
-
-    }
-
-    @When("^i use the template$")
-    public void iUseTheTemplate() throws Throwable {
-      
-    }
-
-    @Then("^i have made life easier$")
-    public void iHaveMadeLifeEasier() throws Throwable {
-        
+        SerenityRest.rest()
+        .given()
+        .when()
+        .get("/"+variable1+"/"+variable2)
+        .then()
+        .statusCode(200);
     }
 }
