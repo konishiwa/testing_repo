@@ -5,6 +5,7 @@ repositories {
 
 ext {
     serenityVersion = "2.0.33"
+    cucumberVersion = "1.2.5"
 }
 
 buildscript {
@@ -21,14 +22,25 @@ apply plugin: 'eclipse'
 apply plugin: 'net.serenity-bdd.aggregator'
 
 dependencies {
-    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:23.0'
-    
-    // https://mvnrepository.com/artifact/info.cukes/cucumber-java
-    compile group: 'info.cukes', name: 'cucumber-java', version: '1.2.5'
-    
+
+    // https://mvnrepository.com/artifact/junit/junit
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.14.0'
+    
+    // https://mvnrepository.com/artifact/info.cukes/cucumber-java
+    compile group: 'info.cukes', name: 'cucumber-java', version: cucumberVersion
+ 
+    // https://mvnrepository.com/artifact/info.cukes/cucumber-junit
+    testCompile group: 'info.cukes', name: 'cucumber-junit', version: cucumberVersion
+    
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber
+    // version: '1.9.23' causes initialization error when running tests
+    compile group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.5.7'
+    
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core
+    compile group: 'net.serenity-bdd', name: 'serenity-core', version: serenityVersion
     
     // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-gradle-plugin
     compile group: 'net.serenity-bdd', name: 'serenity-gradle-plugin', version: serenityVersion

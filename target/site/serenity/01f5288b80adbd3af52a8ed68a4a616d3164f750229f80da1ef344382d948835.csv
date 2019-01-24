@@ -1,2 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"First serenity test","Get all students","SUCCESS","2019-01-23T14:56:16.859-05:00[America/New_York]","0.0","2.38"
+"Test feature template","Test scenario","SUCCESS","2019-01-24T13:26:52.633-05:00[America/New_York]","0.0","6.02"
+"Test feature template","Test scenario outline with examples","SUCCESS","2019-01-24T13:27:05.445-05:00[America/New_York]","0.0","0.02"
