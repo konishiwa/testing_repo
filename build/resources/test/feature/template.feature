@@ -1,13 +1,14 @@
 Feature: Test feature template
 
-Scenario: Test scenario
-Given i have an automation template
-When i use the template
-Then i have made life easier
+Scenario: Test API scenario
+Given i perform an API call
 
-Scenario Outline: Test scenario outline with examples
-Given i can use scenario outline and examples to pass in variables like this <variable1> and <variable2>
+Scenario: Test UI scenario
+Given i open the webpage
 
-Examples:
-| variable1 | variable2 |
-| 1000      | doggo     |
+#Scenario Outline: Test scenario outline with examples
+#Given i perform an API call with parameters <variable1> and <variable2>
+#
+#Examples:
+#| variable1 | variable2 |
+#| 1000      | doggo     |

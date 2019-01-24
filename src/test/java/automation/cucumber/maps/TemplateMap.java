@@ -5,14 +5,25 @@ import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
 import cucumber.api.java.en.Then;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import automation.cucumber.steps.TemplateSteps;
 import cucumber.api.PendingException;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 
 public class TemplateMap {
 	
 	@Steps
 	TemplateSteps steps;
+	
+	String baseUrl = "http://thucydides.info/docs/serenity-staging/";
+	
+    @Given("^i open the webpage$")
+    public void iOpenTheWebpage() throws Throwable {
+    	steps.openWebPage(baseUrl);
+    }
 	
 	//Use TidyGherkin chrome app on the cucumber feature file to easily generate the step file (settings -> camelCase)
     @Given("^i perform an API call$")
