@@ -1,4 +1,4 @@
-package com.studentapp.cucumber.steps;
+package automation.cucumber.maps;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import io.restassured.RestAssured;
@@ -6,12 +6,12 @@ import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
 import cucumber.api.java.en.Then;
 
-import com.studentapp.cucumber.serenity.TemplateSerenitySteps;
+import automation.cucumber.steps.TemplateSerenitySteps;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 
-public class TemplateSteps {
+public class TemplateMap {
 	
 	@Steps
 	TemplateSerenitySteps steps;

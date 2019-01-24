@@ -1,14 +1,16 @@
-package com.studentapp.cucumber;
+package automation.cucumber;
 
 import org.junit.runner.RunWith;
 
-import com.studentapp.testbase.TestBase;
+import automation.base.TestBase;
 
 import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "src/test/resources/feature/")
+@CucumberOptions(features = "src/test/resources/feature/"
+//,glue = "src/test/java/automation.cucumber.maps/"
+)
 public class TemplateRunner extends TestBase{
 	
 
