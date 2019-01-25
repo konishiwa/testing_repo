@@ -68,9 +68,11 @@
 
     <script class="code" type="text/javascript">$(document).ready(function () {
 
+
         $('.scenario-result-table').DataTable({
+
             "order": [[0, "asc",], [3, "asc",]],
-            "pageLength": 10,
+            "pageLength": 25,
             "language": {
                 searchPlaceholder: "Filter",
                 search: ""
@@ -80,31 +82,12 @@
         // Results table
         $('#test-results-table').DataTable({
             "order": [[0, "asc",], [3, "asc",]],
-            "pageLength": 10,
-            "lengthMenu": [[10, 25, 50, 100, 200, -1], [10, 25, 50, 100, 200, "All"]]
+            "pageLength": 100,
+            "lengthMenu": [[25, 50, 100, 200, -1], [25, 50, 100, 200, "All"]]
         });
 
-        $('#evidence-table').DataTable({
-                    searching: false,
-                    paging: false,
-                    info: false
-        });
-
-        $(".feature-coverage-table").DataTable({
-            searching: false,
-            paging: false,
-            info: false
-        });
-
-        $(".feature-coverage-table-with-pagination").DataTable({
-            order: [[0, "asc",]],
-            pageLength: 10,
-            language: {
-                searchPlaceholder: "Filter",
-                search: ""
-            }
-        });
-    });
+    })
+    ;
     </script>
 </head>
 
@@ -120,9 +103,13 @@
 
 <div class="middlecontent">
 
+
     <div id="contenttop">
         <div class="middlebg">
         <span class="breadcrumbs"><a href="index.html">Home</a>
+                > Tag 
+                > <span
+                    class="truncate-60">Googleexample (Pending Tests)</span>
         </span>
         </div>
         <div class="rightbg"></div>
@@ -148,17 +135,24 @@
         <div class="middlb">
             <div class="table">
 
-                <h2>Test Results: All Tests</h2>
+                <h2><i class='fa fa-tags'></i> Tag: Googleexample (Pending Tests)</h2>
                 <table class='overview'>
                     <tr>
                         <td width="375px" valign="top">
                             <div class="test-count-summary">
-                                <div class="test-count-title">
-                                5 test scenarios 
-                                    (including 2 rows of test data)
-                                 |
-                                    <a href="results.csv" title="Download CSV"> <i class="fa fa-download"
-                                                                                    title="Download CSV"></i></a>
+                                <div>
+
+                                1 pending test
+                                    across 1 scenario
+
+                                     |
+                                        <a href="3cfa932fda21da89ed42dd451c8d7e8069e9ba3d9c30008ee846604967b0c4d3.csv" title="Download CSV"> <i class="fa fa-download"
+                                                                                        title="Download CSV"></i></a>
+
+                                    <p class="report-info"><i class="fas fa-info-circle"></i> Note that results include
+                                        data-driven scenarios containing pending test ,
+                                        which may also contain results other than pending test .</p>
+
 
 
                                 </div>
@@ -191,7 +185,7 @@
                                                                 var labels = [' ', ' ', '100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
                                                                 // Our series array that contains series objects or in this case series data arrays
 
-                                                                var series = [{meta: 'Passing tests (automated)', value: 0}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 5}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+                                                                var series = [{meta: 'Passing tests (automated)', value: 0}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 1}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
 
                                                                 // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
                                                                 // as you saw in the previous example
@@ -236,9 +230,7 @@
                                                         <table class="table">
                                                             <thead>
                                                             <tr>
-                                                                <th scope="col">Scenario Results (including rows of test
-                                                                    data)
-                                                                </th>
+                                                                <th scope="col">Scenarios</th>
                                                                 <th scope="col" colspan="2" class="automated-stats">
                                                                     Automated
                                                                 </th>
@@ -254,10 +246,10 @@
                                                             </tr>
                                                             <tr>
                                                                     <td class="aggregate-result-count">
-                                                                        <a href="bde4fca42ca8baa0fe2eac76a241c84327dfe4ca903a1daa7cae83a1035d4745.html"><i
+                                                                        <a href="8ac232174d3b53d54d8e4e882d838fa5fdd84e664e8e1a0c332a132010943049.html"><i
                                                                                 class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending</a>
                                                                     </td>
-                                                                <td class="automated-stats">5</td>
+                                                                <td class="automated-stats">1</td>
                                                                 <td class="automated-stats">100%</td>
                                                             </tr>
                                                             <tr>
@@ -276,7 +268,7 @@
                                                             </tr>
                                                             <tr>
                                                                     <td colspan="3"><a
-                                                                            href="b964a040ccee2192880812cc5de2c4d0075e3288c1b298b7dda0839367bb26be.html"><i
+                                                                            href="7e3ab0152843728d85b2f48d311f41ac1bfaea60930ac94e4dc825aa7449d297.html"><i
                                                                             class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
                                                                     </td>
                                                             </tr>
@@ -304,33 +296,8 @@
                                                             </tr>
                                                             <tr class="summary-stats">
                                                                 <td class="aggregate-result-count">Total</td>
-                                                                <td class="automated-stats">5</td>
+                                                                <td class="automated-stats">1</td>
                                                                 <td class="automated-stats"></td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <table class="table">
-                                                            <thead>
-                                                            <tr>
-                                                                <th>Execution Time</th>
-                                                                <th>Clock Time</th>
-                                                                <th>Fastest Test</th>
-                                                                <th>Slowest Test</th>
-                                                                <th>Average Execution Time</th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td>507ms</td>
-                                                                <td>11s</td>
-                                                                <td>9ms</td>
-                                                                <td>449ms</td>
-                                                                <td>101ms</td>
                                                             </tr>
                                                             </tbody>
                                                         </table>
@@ -389,59 +356,6 @@
                                                     <td><i class='far fa-stop-circle pending-icon ' title='PENDING'></i> <span
                                                             style="display:none">PENDING</span></td>
                                                 </tr>
-                                                <tr class="scenario-result PENDING">
-                                                    <td>
-                                                            <a href="829f05aa5565cbcb0518d031c7d9f1cc5b2c5e0965a2dde597abe7e64564d2b4.html">Test feature template</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="15cf449797d1d11f5e1a6b7349d246914519ec3e646a4855e24df0bbae575c53.html">Test GET API scenario</a>
-                                                    </td>
-                                                    <td>1</td>
-                                                    <td>10:36:46</td>
-                                                    <td>00:00</td>
-                                                    <td><i class='far fa-stop-circle pending-icon ' title='PENDING'></i> <span
-                                                            style="display:none">PENDING</span></td>
-                                                </tr>
-                                                <tr class="scenario-result PENDING">
-                                                    <td>
-                                                            <a href="829f05aa5565cbcb0518d031c7d9f1cc5b2c5e0965a2dde597abe7e64564d2b4.html">Test feature template</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="9b0d2cdf9fe59c872ebd4bfb66cd5c924a4d12fca5c4e29477e9a92c0e2622ff.html">Test POST API scenario</a>
-                                                    </td>
-                                                    <td>1</td>
-                                                    <td>10:36:46</td>
-                                                    <td>00:00</td>
-                                                    <td><i class='far fa-stop-circle pending-icon ' title='PENDING'></i> <span
-                                                            style="display:none">PENDING</span></td>
-                                                </tr>
-                                                <tr class="scenario-result PENDING">
-                                                    <td>
-                                                            <a href="829f05aa5565cbcb0518d031c7d9f1cc5b2c5e0965a2dde597abe7e64564d2b4.html">Test feature template</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="78ebd90c521c175f8a974476de944cfe70a07240eec6445e3b3c21b1d288e85b.html">Test UI scenario</a>
-                                                    </td>
-                                                    <td>1</td>
-                                                    <td>10:36:46</td>
-                                                    <td>00:00</td>
-                                                    <td><i class='far fa-stop-circle pending-icon ' title='PENDING'></i> <span
-                                                            style="display:none">PENDING</span></td>
-                                                </tr>
-                                                <tr class="scenario-result PENDING">
-                                                    <td>
-                                                            <a href="829f05aa5565cbcb0518d031c7d9f1cc5b2c5e0965a2dde597abe7e64564d2b4.html">Test feature template</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="a5a9953350faf9cb69d2605e02a9cb3d1cce81aa41fa9f9ea30f5710b8dac35c.html">Test scenario outline with examples</a>
-                                                                   (1 example)
-                                                    </td>
-                                                    <td>1</td>
-                                                    <td>10:36:46</td>
-                                                    <td>00:00</td>
-                                                    <td><i class='far fa-stop-circle pending-icon ' title='PENDING'></i> <span
-                                                            style="display:none">PENDING</span></td>
-                                                </tr>
                                                 </tbody>
                                             </table>
 
@@ -458,7 +372,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                         </td>
 
                     </tr>

@@ -1,7 +1,10 @@
 Feature: Test feature template
 
-Scenario: Test API scenario
-Given i perform an API call
+Scenario: Test GET API scenario
+Given i perform a GET API call
+
+Scenario: Test POST API scenario
+Given i perform a POST API call
 
 Scenario: Test UI scenario
 Given i open the webpage

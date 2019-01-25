@@ -11,6 +11,10 @@ public class TemplateModel {
 		this.name = name;
 	}
 
+	public TemplateModel() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getId() {
 		return id;
 	}
