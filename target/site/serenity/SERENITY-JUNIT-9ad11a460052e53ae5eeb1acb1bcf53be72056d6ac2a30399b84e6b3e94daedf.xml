@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Example google automation" skipped="0" tests="1" time="8.85" timestamp="2019-01-25 08:53:58"><testcase name="Open google homepage, search for docker, and verify the first result contains docker"/></testsuite>

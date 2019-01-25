@@ -1,3 +1,5 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Test feature template","Test API scenario","SUCCESS","2019-01-24T16:24:42.667-05:00[America/New_York]","0.0","4.4"
-"Test feature template","Test UI scenario","SUCCESS","2019-01-24T16:24:52.306-05:00[America/New_York]","0.0","7.31"
+"Example google automation","Open google homepage, search for docker, and verify the first result contains docker","SUCCESS","2019-01-25T08:53:58.588-05:00[America/New_York]","0.0","8.85"
+"Test feature template","Test API scenario","SUCCESS","2019-01-25T08:54:13.642-05:00[America/New_York]","0.0","3.4"
+"Test feature template","Test UI scenario","SUCCESS","2019-01-25T08:54:17.268-05:00[America/New_York]","0.0","3.58"
+"Test feature template","Test scenario outline with examples","SUCCESS","2019-01-25T08:54:21.288-05:00[America/New_York]","0.0","0.07"

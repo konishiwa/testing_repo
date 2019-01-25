@@ -23,39 +23,18 @@ apply plugin: 'net.serenity-bdd.aggregator'
 
 dependencies {
 
-    // https://mvnrepository.com/artifact/junit/junit
     testCompile group: 'junit', name: 'junit', version: '4.12'
-
-    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.14.0'
-    
-    // https://mvnrepository.com/artifact/info.cukes/cucumber-java
     compile group: 'info.cukes', name: 'cucumber-java', version: cucumberVersion
- 
-    // https://mvnrepository.com/artifact/info.cukes/cucumber-junit
     testCompile group: 'info.cukes', name: 'cucumber-junit', version: cucumberVersion
-    
-    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber
-    // version: '1.9.23' causes initialization error when running tests
+    // latest serenity-cucumber version: '1.9.23' causes initialization error when running tests
     compile group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.5.7'
-    
-    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core
     compile group: 'net.serenity-bdd', name: 'serenity-core', version: serenityVersion
-    
-    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-gradle-plugin
     compile group: 'net.serenity-bdd', name: 'serenity-gradle-plugin', version: serenityVersion
-    
-    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-rest-assured
     compile group: 'net.serenity-bdd', name: 'serenity-rest-assured', version: serenityVersion
-
-    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit
     compile group: 'net.serenity-bdd', name: 'serenity-junit', version: serenityVersion
-
-  // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
     testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
-    
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.11.1'
 }
 
-repositories {
-    jcenter()
-}
+gradle.startParameter.continueOnFailure = true
