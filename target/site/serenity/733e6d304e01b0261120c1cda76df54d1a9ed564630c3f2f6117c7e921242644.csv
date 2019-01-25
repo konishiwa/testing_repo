@@ -1,2 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Example google automation","Open google homepage, search for docker, and verify the first result contains docker","PENDING","2019-01-25T10:36:35.863-05:00[America/New_York]","0.0","0.45"
+"Example google automation","Open google homepage, search for docker, and verify the first result contains docker","SUCCESS","2019-01-25T10:57:33.016-05:00[America/New_York]","0.0","9.63"

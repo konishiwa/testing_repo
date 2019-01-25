@@ -9,7 +9,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "src/test/resources/feature/"
-,glue = "src/test/java/automation.cucumber.maps/"
+//,tags = {"@GoogleExample"}
 )
 public class TemplateRunner extends TestBase{
 	

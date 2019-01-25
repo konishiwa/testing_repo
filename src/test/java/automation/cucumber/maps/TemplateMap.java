@@ -1,37 +1,34 @@
 package automation.cucumber.maps;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
 import groovy.json.JsonBuilder;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
-import cucumber.api.java.en.Then;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import automation.cucumber.steps.TemplateSteps;
 import automation.model.TemplateModel;
-import cucumber.api.PendingException;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import static org.assertj.core.api.Assertions.*;
+
+import javax.json.Json;
+import javax.json.JsonObjectBuilder;
 
 public class TemplateMap {
 	
 	@Steps
 	TemplateSteps steps;
-	
 	String baseUrl = "https://www.google.com";
 	
+	//Use TidyGherkin chrome app on the cucumber feature file to easily generate the step file (settings -> camelCase)
+
     @Given("^i open the webpage$")
     public void iOpenTheWebpage() throws Throwable {
     	steps.openWebPage(baseUrl);
     }
 	
-	//Use TidyGherkin chrome app on the cucumber feature file to easily generate the step file (settings -> camelCase)
     @Given("^i perform a GET API call$")
     public void iPerformAGETAPICall() throws Throwable {
         SerenityRest.rest()
@@ -47,11 +44,11 @@ public class TemplateMap {
     	TemplateModel model = new TemplateModel(123,"test");
     	 RequestSpecification request = RestAssured.given();
     	 
-    	 JsonBuilder params = new JsonBuilder();
-    	 params.setProperty("id", model.getId());
-    	 params.setProperty("name", model.getName());
+    	 JsonObjectBuilder jsonBuilder = Json.createObjectBuilder();
+    	 jsonBuilder.add("id", model.getId());
+    	 jsonBuilder.add("name", model.getName());
     	 
-    	 request.body(params.toPrettyString());
+    	 request.body(jsonBuilder.build().toString());
     	 Response response = request.post(baseUrl);
     	 
     	 System.out.println(response.body().asString());

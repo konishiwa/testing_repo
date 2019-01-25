@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="| docker | docker |" tests="4" skipped="3" failures="0" errors="0" timestamp="2019-01-25T15:36:36" hostname="PSI-1630" time="9.95">
+<testsuite name="| docker | docker |" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-01-25T15:57:39" hostname="PSI-1630" time="9.106">
   <properties/>
-  <testcase name="Given i open the google homepage" classname="| docker | docker |" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="When i search for docker" classname="| docker | docker |" time="0.001">
-    <skipped/>
-  </testcase>
-  <testcase name="Then the first result should link to docker" classname="| docker | docker |" time="0.001">
-    <skipped/>
-  </testcase>
-  <testcase name="classMethod" classname="| docker | docker |" time="10.499"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="Given i open the google homepage" classname="| docker | docker |" time="0.0"/>
+  <testcase name="When i search for docker" classname="| docker | docker |" time="0.0"/>
+  <testcase name="Then the first result should link to docker" classname="| docker | docker |" time="0.0"/>
+  <testcase name="classMethod" classname="| docker | docker |" time="15.17"/>
+  <system-out><![CDATA[
+]]></system-out>
   <system-err><![CDATA[[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
 |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
@@ -23,5 +18,14 @@
 TEST STARTED: Open google homepage, search for docker, and verify the first result contains docker
 -------------------------------------------------------------------(example-google-automation;open-google-homepage,-search-for-docker,-and-verify-the-first-result-contains-docker;;2)
 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - STARTING STEP Example #1: {search=docker, website=docker}
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - STARTING STEP Given i open the google homepage
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - STARTING STEP Open web page: https://www.google.com
+Jan 25, 2019 10:57:33 AM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387) on port 31718
+Only local connections are allowed.
+Jan 25, 2019 10:57:37 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - FINISHING STEP
 ]]></system-err>
 </testsuite>
