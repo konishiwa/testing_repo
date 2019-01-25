@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: GET /emps endpoint" tests="2" skipped="0" failures="2" errors="0" timestamp="2019-01-25T20:00:19" hostname="PSI-1630" time="0.017">
+  <properties/>
+  <testcase name="Given I get a 200 status from /emps endpoint" classname="Scenario: GET /emps endpoint" time="0.003">
+    <failure message="java.lang.AssertionError: You can give a custom error message in the report here" type="java.lang.AssertionError">java.lang.AssertionError: You can give a custom error message in the report here
+	at automation.cucumber.maps.AcmeMap.iGetA200StatusFromEmpsEndpoint(AcmeMap.java:37)
+	at ✽.Given I get a 200 status from /emps endpoint(Acme.feature:5)
+</failure>
+  </testcase>
+  <testcase name="classMethod" classname="Scenario: GET /emps endpoint" time="5.703">
+    <failure message="java.lang.AssertionError: You can give a custom error message in the report here" type="java.lang.AssertionError">java.lang.AssertionError: You can give a custom error message in the report here
+	at automation.cucumber.maps.AcmeMap.iGetA200StatusFromEmpsEndpoint(AcmeMap.java:37)
+	at ✽.Given I get a 200 status from /emps endpoint(Acme.feature:5)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+                                                                  
+
+TEST STARTED: GET /emps endpoint
+-------------------------------------------------------------------(example-google-automation;get-/emps-endpoint)
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - STARTING STEP Given I get a 200 status from /emps endpoint
+]]></system-err>
+</testsuite>

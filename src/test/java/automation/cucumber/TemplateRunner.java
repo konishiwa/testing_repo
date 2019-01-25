@@ -8,9 +8,7 @@ import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "src/test/resources/feature/"
-//,tags = {"@GoogleExample"}
-)
+@CucumberOptions(features = "src/test/resources/feature/")
 public class TemplateRunner extends TestBase{
 	
 
