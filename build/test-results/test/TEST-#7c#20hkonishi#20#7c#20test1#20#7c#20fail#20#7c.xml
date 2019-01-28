@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="| hkonishi | test1 | fail |" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-01-25T22:15:06" hostname="PSI-1623" time="4.217">
+  <properties/>
+  <testcase name="Given I am on the application" classname="| hkonishi | test1 | fail |" time="0.0"/>
+  <testcase name="When hkonishi logs in with test1" classname="| hkonishi | test1 | fail |" time="0.0"/>
+  <testcase name="Then the application shows the fail login status" classname="| hkonishi | test1 | fail |" time="0.0"/>
+  <testcase name="classMethod" classname="| hkonishi | test1 | fail |" time="8.369"/>
+  <system-out><![CDATA[
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - STARTING STEP Example #2: {name=hkonishi, password=test1, status=fail}
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - STARTING STEP Given I am on the application
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - STARTING STEP Open web page: http://pac-bowser1-i-1314236450.us-east-2.elb.amazonaws.com/api/auth/login
+Jan 25, 2019 5:15:02 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Jan 25, 2019 5:15:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - FINISHING STEP
+]]></system-err>
+</testsuite>
